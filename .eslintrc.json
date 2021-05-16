@@ -1,12 +1,28 @@
 {
   "overrides": [{ "files": ["*.jsx", "*.js"] }],
-  "extends": ["react-app", "prettier"],
-  "plugins": ["react-hooks"],
+  "plugins": ["react", "react-native", "react-hooks"],
+  "parser": "babel-eslint",
+  "env": {
+    "jest": true,
+    "react-native/react-native": true
+  },
   "rules": {
+    "arrow-body-style": ["error", "as-needed"],
+    "comma-dangle": ["error", "never"],
     "no-unused-vars": "warn",
+    "no-use-before-define": "off",
+    "padded-blocks": "off",
     "react-hooks/exhaustive-deps": "warn",
-    "react/default-props-match-prop-types": "warn",
     "react-hooks/rules-of-hooks": "error",
+    "react-native/no-color-literals": "error",
+    "react-native/no-inline-styles": "error",
+    "react-native/no-raw-text": "error",
+    "react-native/no-single-element-style-arrays": "error",
+    "react-native/no-unused-styles": "error",
+    "react-native/sort-styles": ["error", "asc", { "ignoreClassNames": false, "ignoreStyleProperties": false }],
+    "react-native/split-platform-components": "error",
+    "react/default-props-match-prop-types": "warn",
+    "react/jsx-filename-extension": ["warn", { "allow": "as-needed" }],
     "react/jsx-key": "error",
     "react/jsx-no-duplicate-props": "error",
     "react/jsx-no-target-blank": "error",
@@ -21,6 +37,10 @@
     "react/no-direct-mutation-state": "error",
     "react/no-multi-comp": "error",
     "react/no-unused-prop-types": "warn",
-    "react/no-unused-state": "warn"
+    "react/no-unused-state": "warn",
+    "react/prop-types": "warn"
+  },
+  "globals": {
+    "fetch": false
   }
 }
